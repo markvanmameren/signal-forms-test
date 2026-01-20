@@ -1,0 +1,49 @@
+<form (submit)="$event.preventDefault(); onSubmit()">
+  <label>
+    <p>Voornaam</p>
+    <input
+      type="text"
+      [formField]="form.firstName"
+      [class.invalid]="form.firstName().dirty() && form.firstName().invalid()"
+    />
+
+    <app-errors [fieldState]="form.firstName()" />
+  </label>
+
+  <label>
+    <p>Achternaam</p>
+    <input
+      type="text"
+      [formField]="form.lastName"
+      [class.invalid]="form.lastName().dirty() && form.lastName().invalid()"
+    />
+
+    <app-errors [fieldState]="form.lastName()" />
+  </label>
+
+  <label>
+    <p>Leeftijd</p>
+    <input
+      type="number"
+      [formField]="form.age"
+      [class.invalid]="form.age().dirty() && form.age().invalid()"
+    />
+
+    <app-errors [fieldState]="form.age()" />
+  </label>
+
+  <label>
+    <p>E-mail</p>
+    <input
+      type="email"
+      [formField]="form.email"
+      [class.invalid]="form.email().dirty() && form.email().invalid()"
+    />
+
+    <app-errors [fieldState]="form.email()" />
+  </label>
+
+  <pre>{{ person() | json }}</pre>
+
+  <button type="submit" [disabled]="form().invalid()">Indienen</button>
+</form>

@@ -1,0 +1,5 @@
+@if (fieldState().dirty() && fieldState().invalid()) {
+  @for (error of fieldState().errors(); track error) {
+    <app-error [error]="error"></app-error>
+  }
+}
