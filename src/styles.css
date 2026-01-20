@@ -2,5 +2,21 @@
   margin: 0;
   padding: 0;
   font-size: 16px;
+  line-height: 1.5rem;
   font-family: Verdana, Tahoma, sans-serif;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+input,
+button {
+  padding: 0.5rem;
+}
+
+.invalid {
+  border: 1px solid red;
 }

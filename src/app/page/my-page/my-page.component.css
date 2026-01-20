@@ -1,0 +1,10 @@
+.my-page {
+  display: flex;
+  flex-direction: column;
+  background-color: #bdc9e0;
+  border-radius: 4px;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1024px;
+  margin: 1rem auto;
+}
