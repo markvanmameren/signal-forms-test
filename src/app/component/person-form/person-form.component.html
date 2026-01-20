@@ -1,44 +1,28 @@
 <form (submit)="$event.preventDefault(); onSubmit()">
   <label>
     <p>Voornaam</p>
-    <input
-      type="text"
-      [formField]="form.firstName"
-      [class.invalid]="form.firstName().dirty() && form.firstName().invalid()"
-    />
+    <input type="text" [formField]="form.firstName" />
 
     <app-errors [fieldState]="form.firstName()" />
   </label>
 
   <label>
     <p>Achternaam</p>
-    <input
-      type="text"
-      [formField]="form.lastName"
-      [class.invalid]="form.lastName().dirty() && form.lastName().invalid()"
-    />
+    <input type="text" [formField]="form.lastName" />
 
     <app-errors [fieldState]="form.lastName()" />
   </label>
 
   <label>
     <p>Leeftijd</p>
-    <input
-      type="number"
-      [formField]="form.age"
-      [class.invalid]="form.age().dirty() && form.age().invalid()"
-    />
+    <input type="number" [formField]="form.age" />
 
     <app-errors [fieldState]="form.age()" />
   </label>
 
   <label>
     <p>E-mail</p>
-    <input
-      type="email"
-      [formField]="form.email"
-      [class.invalid]="form.email().dirty() && form.email().invalid()"
-    />
+    <input type="email" [formField]="form.email" />
 
     <app-errors [fieldState]="form.email()" />
   </label>
